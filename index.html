@@ -1,9 +1,6 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Portafolio de Marco Obando</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: sitio de una página. Cabecera fija, portada verde oscuro como la columna del CV, secciones en fondo claro. */
@@ -107,6 +104,8 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.7rem
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px 32px; }
 .skills h3 { font-family: var(--font-display); font-size: 1.1rem; margin: 0 0 4px; }
 .skills p { margin: 0; color: var(--muted); }
+.soft-title { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; line-height: 1.2; margin: 56px 0 6px; }
+.soft-sub { color: var(--muted); margin: 0 0 28px; max-width: 60ch; }
 
 .path { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 32px; }
 .year h3 { font-family: var(--font-mono); font-weight: 500; font-size: 1.6rem; margin: 0 0 8px; color: var(--accent); }
@@ -163,8 +162,6 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
   .js .reveal.in { opacity: 1; transform: none; }
 }
 </style>
-</head>
-<body>
 <script>document.documentElement.className += " js";</script>
 
 <header class="top">
@@ -176,7 +173,7 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
       <a href="#proyectos">Proyectos</a>
       <a class="opt" href="#habilidades">Habilidades</a>
       <a class="opt" href="#formacion">Formación</a>
-      <a class="btn small dl" href="cv.pdf" download="CV-Marco-Andre-Obando-Li.pdf">Descargar CV</a>
+      <a class="btn small dl" href="cv.pdf" target="_blank" rel="noopener">Descargar CV</a>
     </nav>
   </div>
 </header>
@@ -190,7 +187,7 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
         <p class="lede">Estudio Desarrollo Web en el CTP de Aserrí. Construyo sitios con HTML, CSS y JavaScript, y también estudio redes y ciberseguridad.</p>
         <div class="actions">
           <a class="btn" href="#proyectos">Ver proyectos</a>
-          <a class="btn ghost dl" href="cv.pdf" download="CV-Marco-Andre-Obando-Li.pdf">Descargar CV</a>
+          <a class="btn ghost dl" href="cv.pdf" target="_blank" rel="noopener">Descargar CV</a>
         </div>
       </div>
       <dl class="ficha">
@@ -322,6 +319,17 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
         <div><h3>Ofimática</h3><p>LibreOffice Writer y Calc</p></div>
         <div><h3>Emprendimiento</h3><p>FODA, modelo Canvas, finanzas básicas</p></div>
       </div>
+
+      <h3 class="soft-title">Habilidades blandas</h3>
+      <p class="soft-sub">Lo que aporto al trabajar con otras personas.</p>
+      <div class="skills">
+        <div><h3>Trabajo en equipo</h3><p>Colaborar con otras personas para llegar a un objetivo común</p></div>
+        <div><h3>Disciplina</h3><p>Cumplir con constancia lo que me propongo y las tareas asignadas</p></div>
+        <div><h3>Comunicación efectiva</h3><p>Expresar ideas con claridad y escuchar a los demás</p></div>
+        <div><h3>Resolución de problemas y conflictos</h3><p>Analizar la situación y buscar soluciones que sirvan a todos</p></div>
+        <div><h3>Adaptabilidad</h3><p>Aprender rápido y ajustarme a nuevas herramientas y entornos</p></div>
+        <div><h3>Resiliencia</h3><p>Mantener el ritmo y aprender de los errores ante las dificultades</p></div>
+      </div>
     </div>
   </section>
 
@@ -378,7 +386,7 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
           <h3>CV de Marco André Obando Li</h3>
           <p>Una página con perfil, habilidades, experiencia, idiomas y las 13 certificaciones.</p>
         </div>
-        <a class="btn dl" href="cv.pdf" download="CV-Marco-Andre-Obando-Li.pdf">Descargar CV</a>
+        <a class="btn dl" href="cv.pdf" target="_blank" rel="noopener">Descargar CV</a>
       </div>
       <p class="note" id="dlNote" role="status" aria-live="polite"></p>
     </div>
@@ -429,7 +437,7 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
 
   // Aparición de secciones al hacer scroll
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var targets = document.querySelectorAll(".block .kicker, .block h2, .block .sub, .project, .skills > div, .year, .xp, .cv, .about > div, .contact .wrap > *");
+  var targets = document.querySelectorAll(".block .kicker, .block h2, .block .sub, .soft-title, .soft-sub, .project, .skills > div, .year, .xp, .cv, .about > div, .contact .wrap > *");
   var counts = new Map();
   Array.prototype.forEach.call(targets, function (el) {
     el.classList.add("reveal");
@@ -448,13 +456,13 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
     Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
 
     // Menú: marca la sección que se está viendo
-    var links = document.querySelectorAll('nav.menu a[href^="#"]:not(.btn)');
+    var links2 = document.querySelectorAll('nav.menu a[href^="#"]:not(.btn)');
     var byHash = {};
-    Array.prototype.forEach.call(links, function (a) { byHash[a.getAttribute("href")] = a; });
+    Array.prototype.forEach.call(links2, function (a) { byHash[a.getAttribute("href")] = a; });
     var nav = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) { return; }
-        Array.prototype.forEach.call(links, function (a) { a.removeAttribute("aria-current"); });
+        Array.prototype.forEach.call(links2, function (a) { a.removeAttribute("aria-current"); });
         var a = byHash["#" + e.target.id];
         if (a) { a.setAttribute("aria-current", "true"); }
       });
@@ -499,5 +507,5 @@ nav.menu a[aria-current="true"] { border-bottom-color: var(--accent); }
   });
 })();
 </script>
-</body>
-</html>
+
+</body></html>
